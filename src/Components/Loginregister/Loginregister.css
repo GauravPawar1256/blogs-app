@@ -1,0 +1,41 @@
+.header{
+    background-color: #000080;
+    color:white;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 40px;
+}
+.headername{
+    font-size: 18px;
+    font-weight: 600;
+}
+.headerlinks{
+    margin: 0px 15px;
+}
+.background{
+    background-color: rgb(203, 203, 203);
+    height:100vh;
+    margin: auto;
+}
+.Blogssection{
+    width: 60%;
+    margin:50px auto ;
+    padding: 25px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 5px;
+    box-shadow:  rgb(92, 89, 89) 1px 1px 1px 1px;
+}
+.buttonsection{
+    display: flex;
+    justify-content: end;
+    margin: 15px 0px 30px 0px;
+}
+.buttonsection1{
+    background-color: navy;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin: 0px 8px;
+    font-weight: bold;
+}
