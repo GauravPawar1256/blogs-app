@@ -1,23 +1,23 @@
-.header{
+.header2{
     background-color: #000080;
     color:white;
     display: flex;
     justify-content:space-between;
     padding: 10px 40px;
 }
-.headername{
+.headername2{
     font-size: 18px;
     font-weight: 600;
 }
-.headerlinks{
+.headerlinks2{
     margin: 0px 15px;
 }
-.background{
+.background2{
     background-color: rgb(203, 203, 203);
     height:100vh;
     margin: auto;
 }
-.loginsection{
+.loginsection2{
     background-color: rgb(237, 237, 237);
     width: 20%;
     margin: 70px auto;
@@ -25,14 +25,14 @@
     box-shadow: rgb(92, 89, 89) 2px 6px 6px;
     padding: 15px;
 }
-.firstname{
+.firstname2{
     font-size: 28px;
     color: black;
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.secondline{
+.secondline2{
     font-size: 16px;
     font-weight: 600;
     padding-bottom: 8px;
@@ -40,7 +40,7 @@
     border-bottom: 1px solid rgb(92, 89, 89) ;
 
 }
-.loginname{
+.loginname2{
     display: flex;
     justify-content: center;
     font-size: 26px;
@@ -49,7 +49,7 @@
     margin: 22px ;
 
 }
-.inputtag{
+.inputtag2{
     width: 100%;
     height: 25px;
     border: none;
@@ -57,7 +57,7 @@
     margin-bottom: 10px;
     margin-top: 8px;
 }
-.buttonlogin{
+.buttonlogin2{
     width: 100%;
     height: 30px;
     background-color: navy;
@@ -65,5 +65,5 @@
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }

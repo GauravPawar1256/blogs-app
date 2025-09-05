@@ -1,0 +1,72 @@
+.header{
+    background-color: #000080;
+    color:white;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 40px;
+}
+.headername{
+    font-size: 18px;
+    font-weight: 600;
+}
+.headerlinks{
+    margin: 0px 15px;
+}
+.background{
+    background-color: rgb(203, 203, 203);
+    height:100vh;
+    margin: auto;
+}
+.firstsection{
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(64, 63, 63);
+    padding-bottom: 20px;
+}
+.name1{
+    font-size: 32px;
+    font-weight: 600;
+}
+.createbutton{
+    margin: 10px;
+    padding: 5px;
+    background-color: navy;
+    color: white;
+    font-weight: 550;
+    border: none;
+    border-radius:4px ;
+}
+.blogssectionbox{
+    width: 60%;
+    margin: 20px auto;
+    border-radius:8px;
+    border: none;
+    background-color:rgb(237, 237, 237) ;
+    color: black;
+    box-shadow: rgb(41, 41, 41) 1px 1px 1px 1px;
+    padding: 15px;
+}
+.hrline{
+    width: 100%;
+    margin: 10px 0px;
+    border: 1px solid rgb(64, 63, 63);
+}
+.blogtitle{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 8px 0px;
+}
+.buttonssection{
+    display: flex;
+    justify-content: space-between;
+}
+.buttonsicons{
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius:4px ;
+    padding: 8px;
+    margin:20px  5px;
+}
