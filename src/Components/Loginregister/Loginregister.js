@@ -22,8 +22,8 @@ function Loginregister() {
             </div>
             <div>
                 <div className="Blogssection3">
-                    <div className="firstname3">Blogs !</div>
-                    <div className="secondline3">Publish your passion,your way...</div>
+                    <div className="firstname">Blogs !</div>
+                    <div className="secondline">Publish your passion,your way...</div>
                     <div className='buttonsection10'>
                         <button className='buttonsection3' onClick={navigateToLogin}>Login</button>
                         <div>
