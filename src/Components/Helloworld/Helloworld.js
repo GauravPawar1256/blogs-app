@@ -49,7 +49,7 @@ function Helloworld() {
                     <button className='createbutton' onClick={navigateTonewpost}><i class="fa fa-plus-circle" aria-hidden="true"></i> Create New Post</button>
                 </div>
             </div>
-            {blogs.length!==0 && blogs.map((singleElement) => (
+            {blogs?.map((singleElement) => (
             <div className='blogssectionbox'>
                 
                 <div className='blogssection'>
@@ -63,11 +63,11 @@ function Helloworld() {
                 <div className='buttonssection'>
                     <div>
                         <span><button className='buttonsicons'><i class="fa fa-thumbs-up" aria-hidden="true"></i></button></span>
-                        <span><button className='buttonsicons'><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></span>
+                        <span><button className='buttonsicons12'><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></span>
                     </div>
                     <div>
                         <span><button className='buttonsicons'>Edit <i class="fa fa-pencil" aria-hidden="true"></i></button></span>
-                        <span><button className='buttonsicons'>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
+                        <span><button className='buttonsicons12'>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
                     </div>
                 </div> 
                 </div>

@@ -16,7 +16,7 @@ function Textbox(){
     }
     function handlesave(){
         console.log(userBlog);
-        axios.post('http://localhost:3001/blog',userBlog)
+        axios.post('http://localhost:3001/userblog',userBlog)
         navigate("/blogs");
     }
     const navigate =useNavigate();
