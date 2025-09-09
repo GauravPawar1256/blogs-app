@@ -27,8 +27,49 @@
       "userName": "",
       "email_id": "",
       "password": ""
+    },
+    {
+      "id": "bfd6",
+      "userName": "gaurav",
+      "email_id": "pawargaurav1256@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "5bdb",
+      "userName": "gaurav",
+      "email_id": "gaurav1256@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "b41b",
+      "userName": "pawar",
+      "email_id": "gaurav@123",
+      "password": "123"
+    },
+    {
+      "id": "f870",
+      "userName": "gaurav132545",
+      "email_id": "gaurav@email.com",
+      "password": "123"
+    },
+    {
+      "id": "8497",
+      "userName": "grv",
+      "email_id": "pawar@123",
+      "password": "321"
+    },
+    {
+      "id": "e2d6",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "1bc1",
+      "userName": "gaurav",
+      "email_id": "gaurav00",
+      "password": "123"
     }
-    
   ],
   "userblog": [
     {
@@ -41,7 +82,6 @@
       "title": "new blog",
       "description": "sahudeubecdhwheu"
     },
-    
     {
       "id": "2d24",
       "title": "gaurav 1213",

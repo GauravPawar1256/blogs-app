@@ -35,7 +35,7 @@ function Register() {
     axios.post("http://localhost:3001/user", userDataofRegister)
       .then((response) => {
         console.log(" User saved:", response.data);
-        navigate("/blogs");
+        navigate("/login");
       })
       .catch((error) => {
         console.error("Error:", error);

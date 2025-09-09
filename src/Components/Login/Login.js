@@ -1,41 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css"
 import { useNavigate } from "react-router-dom";
-function Login(){
- const navigate =useNavigate();
- const navigateToRegister=()=>{
-    navigate("/register")}
-    const navigateToLogin=()=>{
+import axios from "axios";
+function Login() {
+    const [userData, setuserData] = useState({ email: "", password: "" })
+    function handleEmail_id(event) {
+        let user = { ...userData }
+        user["email"] = event.target.value;
+        setuserData(user)
+    }
+    function handlePassword(event) {
+        let user = { ...userData }
+        user["password"] = event.target.value;
+        setuserData(user)
+    }
+    const navigate = useNavigate();
+    const navigateToRegister = () => {
+        navigate("/register")
+    }
+    const navigateToLogin = () => {
         navigate("/login")
     }
-    const navigateToDashboard=()=>{
+    const navigateToDashboard = () => {
         navigate("/loginregister")
     }
-    const navigateTohelloworld=()=>{
-        navigate("/blogs")
-    }
-    
- 
 
-    return(
-        <div className="background">
+    function handleLoginData() {
+        console.log(userData);
+        axios.get("http://localhost:3001/user")
+            .then((response) => {
+
+                response.data.map((singleElement) => {
+                    if (singleElement.email_id === userData.email && singleElement.password === userData.password) {
+                        console.log("logged in successfully");
+                        navigate("/blogs")
+
+                    }
+                    else {
+                        console.log("invalid user");
+
+                    }
+
+                })
+            })
+
+    }
+
+
+
+    return (
+        <div className="background23">
             <div className="header">
                 <div className="headername" onClick={navigateToDashboard}>Blogs</div>
-               <div>
-                <span className="headerlinks" onClick={navigateToLogin}>Login</span>
-                <span className="headerlinks" onClick={navigateToRegister}>Register</span>
+                <div>
+                    <span className="headerlinks" onClick={navigateToLogin}>Login</span>
+                    <span className="headerlinks" onClick={navigateToRegister}>Register</span>
                 </div>
             </div>
             <div>
-              <div className="loginsection">
-                <div className="firstname">Blogs</div>
-                <div className="secondline">Publish your passion,your way...</div>
-                <div className="loginname">Login</div>
-                <label>Email id</label><br/>
-                <input type="text" placeholder="Test@gmail.com" className="inputtag"/><br/>
-                <label>Password</label><br/>
-                <input type="Password" placeholder="Test@123" className="inputtag"/><br/>
-                <button className="buttonlogin" onClick={navigateTohelloworld}>Login</button>
+                <div className="loginsection">
+                    <div className="firstname">Blogs</div>
+                    <div className="secondline">Publish your passion,your way...</div>
+                    <div className="loginname">Login</div>
+                    <label>Email id</label><br />
+                    <input type="text" placeholder="Test@gmail.com" className="inputtag" value={userData.email} onChange={handleEmail_id} /><br />
+                    <label>Password</label><br />
+                    <input type="Password" placeholder="Test@123" className="inputtag" value={userData.password} onChange={handlePassword} /><br />
+                    <button className="buttonlogin" onClick={handleLoginData}>Login</button>
                 </div>
             </div>
         </div>

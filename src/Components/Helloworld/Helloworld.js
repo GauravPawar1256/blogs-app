@@ -28,6 +28,17 @@ function Helloworld() {
                 console.error("Error fetching blogs:", error);
             });
     }, []);
+
+    function handleDeleteBlog(id) {
+  axios.delete(`http://localhost:3001/userblog/${id}`)
+    .then(() => {
+      alert("Blog deleted successfully!");
+      // No setBlogs call here; list will stay as is until you refresh/fetch again
+    })
+    .catch((error) => {
+      console.error("Error deleting blog:", error);
+    });
+}
         
 
     return (
@@ -67,7 +78,7 @@ function Helloworld() {
                     </div>
                     <div>
                         <span><button className='buttonsicons'>Edit <i class="fa fa-pencil" aria-hidden="true"></i></button></span>
-                        <span><button className='buttonsicons12'>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
+                        <span><button className='buttonsicons12' onClick={handleDeleteBlog}>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
                     </div>
                 </div> 
                 </div>
