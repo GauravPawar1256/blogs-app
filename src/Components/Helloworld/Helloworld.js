@@ -19,10 +19,19 @@ function Helloworld() {
     //         Created_At: "5th sep,2025",
     //         Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     //     }];
+    function getJsonData() {
+    axios.get("http://localhost:3001/userblog")
+      .then((res) => {
+        setBlogs(res.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching blogs:", error);
+      });
+  }
         useEffect(() => {
         axios.get("http://localhost:3001/userblog")
             .then((response) => {
-                setBlogs(response.data.blogs || response.data); // Adjust depending on API shape
+                setBlogs(response.data.blogs || response.data); 
             })
             .catch((error) => {
                 console.error("Error fetching blogs:", error);
@@ -33,11 +42,13 @@ function Helloworld() {
   axios.delete(`http://localhost:3001/userblog/${id}`)
     .then(() => {
       alert("Blog deleted successfully!");
-      // No setBlogs call here; list will stay as is until you refresh/fetch again
+       getJsonData();
     })
     .catch((error) => {
       console.error("Error deleting blog:", error);
     });
+    
+
 }
         
 
@@ -64,7 +75,7 @@ function Helloworld() {
             <div className='blogssectionbox'>
                 
                 <div className='blogssection'>
-                    <div className='blogtitle'> {singleElement.title} </div>
+                    <div className='blogtitle' key={singleElement.id}> {singleElement.title} </div>
                     <div><strong>Created By:</strong> {singleElement.Created_By}</div>
                     <div><strong>Created At:</strong> {singleElement.Created_At}</div>
                     <hr className='hrline'></hr>
@@ -78,7 +89,7 @@ function Helloworld() {
                     </div>
                     <div>
                         <span><button className='buttonsicons'>Edit <i class="fa fa-pencil" aria-hidden="true"></i></button></span>
-                        <span><button className='buttonsicons12' onClick={handleDeleteBlog}>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
+                        <span><button className='buttonsicons12' onClick={() => handleDeleteBlog(singleElement.id)}>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
                     </div>
                 </div> 
                 </div>
