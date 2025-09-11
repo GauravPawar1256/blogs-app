@@ -47,20 +47,14 @@ function Helloworld() {
     .catch((error) => {
       console.error("Error deleting blog:", error);
     });
-    
-
-}
-// //  function handleEditBlog(id){
-//         navigate(`/title/${id}`);
-
-//     }
+    }
 
  
         
 
     return (
 
-        <div className="background">
+        <div className="background78">
             <div className="header">
                 <div className="headername">Blogs</div>
                 <div>
@@ -85,7 +79,7 @@ function Helloworld() {
                     <div><strong>Created By:</strong> {singleElement.Created_By}</div>
                     <div><strong>Created At:</strong> {singleElement.Created_At}</div>
                     <hr className='hrline'></hr>
-                    <div>{singleElement.description}</div>
+                    <div className='maininfotext'>{singleElement.description}</div>
                
            
                 <div className='buttonssection'>
