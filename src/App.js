@@ -23,6 +23,7 @@ function App() {
           <Route path='/' element={<Loginregister/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/title/:id' element={<Textbox/>}/>
           <Route path='/title' element={<Textbox/>}/>
           <Route path='/blogs' element={<Helloworld/>}/>
 

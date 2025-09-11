@@ -50,6 +50,12 @@ function Helloworld() {
     
 
 }
+// //  function handleEditBlog(id){
+//         navigate(`/title/${id}`);
+
+//     }
+
+ 
         
 
     return (
@@ -88,7 +94,7 @@ function Helloworld() {
                         <span><button className='buttonsicons12'><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></span>
                     </div>
                     <div>
-                        <span><button className='buttonsicons'>Edit <i class="fa fa-pencil" aria-hidden="true"></i></button></span>
+                        <span><button className='buttonsicons'onClick={() => navigate(`/title/${singleElement.id}`)}>Edit <i class="fa fa-pencil" aria-hidden="true"></i></button></span>
                         <span><button className='buttonsicons12' onClick={() => handleDeleteBlog(singleElement.id)}>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
                     </div>
                 </div> 
