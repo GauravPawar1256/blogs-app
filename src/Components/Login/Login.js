@@ -26,13 +26,18 @@ function Login() {
     }
 
     function handleLoginData() {
-        console.log(userData);
+        // console.log(userData);
         axios.get("http://localhost:3001/user")
             .then((response) => {
 
                 response.data.map((singleElement) => {
                     if (singleElement.email_id === userData.email && singleElement.password === userData.password) {
                         console.log("logged in successfully");
+                        localStorage.setItem('userName',singleElement.userName)
+                        localStorage.setItem('userEmail',singleElement.email_id)
+                    
+                        console.log(singleElement.email_id)
+                        console.log(localStorage.getItem('userEmail'))
                         navigate("/blogs")
 
                     }

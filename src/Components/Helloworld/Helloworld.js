@@ -5,6 +5,8 @@ import axios from "axios";
 import { useState } from 'react';
 function Helloworld() {
     const [blogs, setBlogs]=useState();
+    const [username, setUsername]=useState();
+    const [email, setEmail]=useState();
      const navigate =useNavigate();
      const navigateTonewpost=()=>{
         navigate("/title")
@@ -19,6 +21,7 @@ function Helloworld() {
     //         Created_At: "5th sep,2025",
     //         Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     //     }];
+    
     function getJsonData() {
     axios.get("http://localhost:3001/userblog")
       .then((res) => {
@@ -49,7 +52,26 @@ function Helloworld() {
     });
     }
 
- 
+    const handleLike = (id, likes) => {
+  axios.patch(`http://localhost:3001/userblog/${id}`, { likes: likes + 1 })
+    .then(() => {
+      getJsonData();
+    })
+    .catch(error => {
+      console.error("Error updating likes", error);
+    });
+};
+
+const handleDisLike = (id, dislikes) => {
+  axios.patch(`http://localhost:3001/userblog/${id}`, { dislikes: dislikes + 1 })
+    .then(() => {
+      getJsonData();
+    })
+    .catch(error => {
+      console.error("Error updating dislikes", error);
+    });
+};
+
         
 
     return (
@@ -58,7 +80,7 @@ function Helloworld() {
             <div className="header">
                 <div className="headername">Blogs</div>
                 <div>
-                    <span className="headerlinks">Gaurav Pawar</span>
+                    <span className="headerlinks">{localStorage.getItem('userName')}</span>
                     <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                     <span className="headerlinks" onClick={navigateToRegister}>Register</span>
                 </div>
@@ -76,7 +98,7 @@ function Helloworld() {
                 
                 <div className='blogssection'>
                     <div className='blogtitle' key={singleElement.id}> {singleElement.title} </div>
-                    <div><strong>Created By:</strong> {singleElement.Created_By}</div>
+                    <div><strong>Created By:</strong> {singleElement.create_by}</div>
                     <div><strong>Created At:</strong> {singleElement.Created_At}</div>
                     <hr className='hrline'></hr>
                     <div className='maininfotext'>{singleElement.description}</div>
@@ -84,8 +106,8 @@ function Helloworld() {
            
                 <div className='buttonssection'>
                     <div>
-                        <span><button className='buttonsicons'><i class="fa fa-thumbs-up" aria-hidden="true"></i></button></span>
-                        <span><button className='buttonsicons12'><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></span>
+                        <span><button className='buttonsicons'onClick={() => handleLike(singleElement.id, singleElement.likes)}><i class="fa fa-thumbs-up" aria-hidden="true" ></i>{singleElement.likes}</button></span>
+                        <span><button className='buttonsicons12'onClick={() => handleDisLike(singleElement.id, singleElement.dislikes)}><i class="fa fa-thumbs-down" aria-hidden="true" ></i>{singleElement.dislikes}</button></span>
                     </div>
                     <div>
                         <span><button className='buttonsicons'onClick={() => navigate(`/title/${singleElement.id}`)}>Edit <i class="fa fa-pencil" aria-hidden="true"></i></button></span>

@@ -15,9 +15,14 @@ function Textbox() {
         blog["description"] = event.target.value;
         setuserBlog(blog)
     }
+
     function handlesave1() {
+        const useremail=localStorage.getItem('userEmail')
         console.log(userBlog);
-        axios.post('http://localhost:3001/userblog', userBlog)
+        axios.post('http://localhost:3001/userblog',{...userBlog,
+            create_by:useremail
+        })
+
         navigate("/blogs");
 
     }
@@ -33,6 +38,7 @@ function Textbox() {
             .catch(err => console.error("erroe editing blog", err));
     }, [id]);
     function handleSave() {
+        
         if (id) {
             // Update existing blog
             axios.put(`http://localhost:3001/userblog/${id}`, userBlog)
@@ -59,7 +65,7 @@ function Textbox() {
             <div className="header1">
                 <div className="headername1">Blogs</div>
                 <div>
-                    <span className="headerlinks1">Gaurav pawar</span>
+                    <span className="headerlinks1">{localStorage.getItem('userName')}</span>
                     <span className="headerlinks1" onClick={navigateToLogin}>Log out</span>
                 </div>
             </div>

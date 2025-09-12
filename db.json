@@ -87,28 +87,66 @@
       "userName": "",
       "email_id": "",
       "password": ""
+    },
+    {
+      "id": "7ae3",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "1f61",
+      "userName": "gaurav(grv)",
+      "email_id": "gaurav@321",
+      "password": "321"
+    },
+    {
+      "id": "0a1d",
+      "userName": "sss",
+      "email_id": "sss",
+      "password": "sss"
+    },
+    {
+      "id": "017c",
+      "userName": "Pawar Gaurav",
+      "email_id": "gauravpawar6785@gmail.com",
+      "password": "1234"
     }
   ],
   "userblog": [
     {
       "title": "gaurav (grv)",
-      "description": "निसर्ग हा मानवाच्या जीवनातील अत्यंत महत्त्वाचा भाग आहे. निसर्गातली झाडे, फुले, प्राणी आणि पक्षी आपल्या आयुष्यात आनंद आणि शांतीची अनुभूती देतात. झऱ्याचे पाणी, गार वारा आणि हिरवेगार जंगल आपल्याला ताजेतवाने ठेवतात. निसर्गाची काळजी घेणे हे आपले कर्तव्य आहे, कारण त्याशिवाय मानवाचे जीवन सुसह्य राहू शकत नाही. आपण प्रदूषण कमी करावे, झाडे लावावी आणि नैसर्गिक संसाधनांचा शाश्वत वापर करावा.",
-      "id": "3f29"
+      "description": "निसर्ग हा मानवाच्या जीवनातील अत्यंत महत्त्वाचा भाग आहे. निसर्गातली झाडे, फुले, प्राणी आणि पक्षी आपल्या आयुष्यात आनंद आणि शांतीची अनुभूती देतात. झऱ्याचे पाणी, गार वारा आणि हिरवेगार जंगल आपल्याला ताजेतवाने ठेवतात. निसर्गाची काळजी घेणे हे आपले कर्तव्य आहे, कारण त्याशिवाय मानवाचे जीवन सुसह्य राहू शकत नाही. आपण प्रदूषण कमी करावे, झाडे लावावी आणि नैसर्गिक संसाधनांचा शाश्वत वापर करावा...\\",
+      "id": "3f29",
+      "likes": 5,
+      "dislikes": 11
     },
     {
       "id": "9f9d",
       "title": "GRV",
-      "description": "Hello, my name is Gaurav Pawar. I am a passionate web developer with experience in React, JavaScript, and building dynamic web applications. I enjoy creating user-friendly interfaces and solving real-world problems through code. I recently worked on projects where I designed and implemented blog management systems using React and Axios for seamless front-end and back-end communication. 🙌👍"
+      "description": "Hello, my name is Gaurav Pawar. I am a passionate web developer with experience in React, JavaScript, and building dynamic web applications. I enjoy creating user-friendly interfaces and solving real-world problems through code. I recently worked on projects where I designed and implemented blog management systems using React and Axios for seamless front-end and back-end communication. 🙌👍",
+      "likes": 14,
+      "dislikes": 17
     },
     {
       "id": "e734",
       "title": "shardul",
-      "description": "Hello, my name is Shardul Pawar. I am a passionate web developer with experience in React, JavaScript, and building dynamic web applications. I enjoy creating user-friendly interfaces and solving real-world problems through code. I recently worked on projects where I designed and implemented blog management systems using React and Axios for seamless front-end and back-end communication."
+      "description": "Hello, my name is Shardul Pawar. I am a passionate web developer with experience in React, JavaScript, and building dynamic web applications. I enjoy creating user-friendly interfaces and solving real-world problems through code. I recently worked on projects where I designed and implemented blog management systems using React and Axios for seamless front-end and back-end communication.",
+      "likes": 9,
+      "dislikes": 4
     },
     {
       "id": "3ac6",
       "title": "wwww",
-      "description": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+      "description": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+      "dislikes": 3,
+      "likes": 11
+    },
+    {
+      "id": "bb1c",
+      "title": "my new blog",
+      "description": "add email at created by ",
+      "create_by": "gauravpawar6785@gmail.com"
     }
   ]
 }
