@@ -2,6 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import './Textbox.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import moment from 'moment';
 function Textbox() {
     const [userBlog, setuserBlog] = useState({ title: "", description: "" })
     const { id } = useParams();
@@ -20,31 +21,33 @@ function Textbox() {
         const useremail=localStorage.getItem('userEmail')
         console.log(userBlog);
         axios.post('http://localhost:3001/userblog',{...userBlog,
-            create_by:useremail
+            create_by:useremail,
+            created_At: moment().format('YYYY-MM-DD HH:mm:ss')
+            
         })
-
-        navigate("/blogs");
+         navigate("/blogs");
 
     }
     useEffect(() => {
+    if (id) {
         axios.get(`http://localhost:3001/userblog/${id}`)
             .then(response => {
-                setuserBlog({
-                    title: response.data.title,
-                    description: response.data.description
-                })
-
+                setuserBlog(response.data);
             })
-            .catch(err => console.error("erroe editing blog", err));
-    }, [id]);
+            .catch(err => console.error("error editing blog", err));
+    }
+}, [id]);
+
     function handleSave() {
         
         if (id) {
             // Update existing blog
+            const userEmail = localStorage.getItem('userEmail');
             axios.put(`http://localhost:3001/userblog/${id}`, userBlog)
                 .then((response) => {
                     alert("Blog updated successfully");
                     console.log("blog edited successfully", response.data);
+
                     navigate("/blogs"); // just navigate, no POST
                 })
                 .catch(err => console.error(err));

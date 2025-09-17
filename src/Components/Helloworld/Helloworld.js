@@ -98,8 +98,8 @@ const handleDisLike = (id, dislikes) => {
                 
                 <div className='blogssection'>
                     <div className='blogtitle' key={singleElement.id}> {singleElement.title} </div>
-                    <div><strong>Created By:</strong> {singleElement.create_by}</div>
-                    <div><strong>Created At:</strong> {singleElement.Created_At}</div>
+                    <div><strong>Created By:</strong><i> {singleElement.create_by}</i></div>
+                    <div><strong>Created At:</strong> {singleElement.created_At}</div>
                     <hr className='hrline'></hr>
                     <div className='maininfotext'>{singleElement.description}</div>
                
