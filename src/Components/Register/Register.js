@@ -31,16 +31,23 @@ function Register() {
   }
 
  
-  const navigateTohelloworld = () => {
-    axios.post("http://localhost:3001/user", userDataofRegister)
-      .then((response) => {
-        console.log(" User saved:", response.data);
-        navigate("/login");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
+  function navigateTohelloworld() {
+  console.log(userDataofRegister);
+  if (!userDataofRegister.userName || !userDataofRegister.email_id || !userDataofRegister.password) {
+    alert("Please enter all fields");
+    return;
+  }
+
+  axios.post("http://localhost:3001/user", userDataofRegister)
+    .then(() => {
+      navigate("/login");
+    })
+    .catch((error) => {
+      console.error("Error registering user:", error);
+    });
+}
+
+
 
   return (
     <div className="background2">

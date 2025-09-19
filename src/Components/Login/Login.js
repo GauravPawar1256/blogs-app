@@ -26,30 +26,34 @@ function Login() {
     }
 
     function handleLoginData() {
-        // console.log(userData);
-        axios.get("http://localhost:3001/user")
-            .then((response) => {
+  if (!userData.email || !userData.password) {
+    alert("Please enter email and password");
+    return;
+  }
 
-                response.data.map((singleElement) => {
-                    if (singleElement.email_id === userData.email && singleElement.password === userData.password) {
-                        console.log("logged in successfully");
-                        localStorage.setItem('userName',singleElement.userName)
-                        localStorage.setItem('userEmail',singleElement.email_id)
-                    
-                        console.log(singleElement.email_id)
-                        console.log(localStorage.getItem('userEmail'))
-                        navigate("/blogs")
+  axios.get("http://localhost:3001/user")
+    .then((response) => {
+      const user = response.data.find(
+        (singleElement) =>
+          singleElement.email_id === userData.email &&
+          singleElement.password === userData.password
+      );
 
-                    }
-                    else {
-                        console.log("invalid user");
+      if (user) {
+        console.log("logged in successfully");
+        localStorage.setItem("userName", user.userName);
+        localStorage.setItem("userEmail", user.email_id);
+        navigate("/blogs");
+      } else {
+        alert("Invalid email or password");
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching users:", error);
+      alert("Something went wrong, please try again.");
+    });
+}
 
-                    }
-
-                })
-            })
-
-    }
 
 
 
@@ -69,7 +73,7 @@ function Login() {
                     <div className="loginname">Login</div>
                     <label>Email id</label><br />
                     <input type="text" placeholder="Test@gmail.com" className="inputtag" value={userData.email} onChange={handleEmail_id} /><br />
-                    <label>Password</label><br />
+                    <label>Password</label><br/>
                     <input type="Password" placeholder="Test@123" className="inputtag" value={userData.password} onChange={handlePassword} /><br />
                     <button className="buttonlogin" onClick={handleLoginData}>Login</button>
                 </div>

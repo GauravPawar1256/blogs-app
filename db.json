@@ -117,6 +117,24 @@
       "userName": "gaurav(grv)",
       "email_id": "gaurav(grv)@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "7104",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "9cc6",
+      "userName": "123",
+      "email_id": "123456",
+      "password": "1234"
+    },
+    {
+      "id": "edf1",
+      "userName": "     ",
+      "email_id": "       ",
+      "password": "      "
     }
   ],
   "userblog": [
@@ -130,14 +148,18 @@
     {
       "title": "my new blog",
       "description": "add email at created by aaaaqaqaaaa",
-      "id": "bb1c"
+      "id": "bb1c",
+      "dislikes": 13,
+      "likes": 15
     },
     {
       "id": "d2e8",
       "title": "gaurav",
       "description": "निसर्ग हा मानवाच्या जीवनातील अत्यंत महत्त्वाचा भाग आहे. निसर्गातली झाडे, फुले, प्राणी आणि पक्षी आपल्या आयुष्यात आनंद आणि शांतीची अनुभूती देतात. झऱ्याचे पाणी, गार वारा आणि हिरवेगार जंगल आपल्याला ताजेतवाने ठेवतात. निसर्गाची काळजी घेणे हे आपले कर्तव्य आहे, कारण त्याशिवाय मानवाचे जीवन सुसह्य राहू शकत नाही. आपण प्रदूषण कमी करावे, झाडे लावावी आणि नैसर्गिक संसाधनांचा शाश्वत वापर करावा...",
       "create_by": "gaurav(grv)@gmail.com",
-      "created_At": "2025-09-17 15:27:24"
+      "created_At": "2025-09-17 15:27:24",
+      "likes": 12,
+      "dislikes": 12
     },
     {
       "title": "sssss",
@@ -145,8 +167,8 @@
       "create_by": "gaurav(grv)@gmail.com",
       "created_At": "2025-09-17 15:58:04",
       "id": "d30d",
-      "likes": 2,
-      "dislikes": 2
+      "likes": 14,
+      "dislikes": 14
     }
   ]
 }

@@ -109,10 +109,12 @@ const handleDisLike = (id, dislikes) => {
                         <span><button className='buttonsicons'onClick={() => handleLike(singleElement.id, singleElement.likes)}><i class="fa fa-thumbs-up" aria-hidden="true" ></i>{singleElement.likes}</button></span>
                         <span><button className='buttonsicons12'onClick={() => handleDisLike(singleElement.id, singleElement.dislikes)}><i class="fa fa-thumbs-down" aria-hidden="true" ></i>{singleElement.dislikes}</button></span>
                     </div>
-                    <div>
+                     {singleElement.create_by===localStorage.getItem("userEmail")?(<div>
+                     
+                        
                         <span><button className='buttonsicons'onClick={() => navigate(`/title/${singleElement.id}`)}>Edit <i class="fa fa-pencil" aria-hidden="true"></i></button></span>
                         <span><button className='buttonsicons12' onClick={() => handleDeleteBlog(singleElement.id)}>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
-                    </div>
+                      </div>):null}
                 </div> 
                 </div>
             </div>
